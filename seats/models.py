@@ -1,9 +1,19 @@
 from dataclasses import dataclass
 
 
-@dataclass(frozen=True)
+@dataclass
 class FlightQuery:
-    airline: str
-    origin: str
+    airlines: list
+    origins: list
     dest: str
     date: str
+
+
+@dataclass
+class Fare:
+    airline: str
+    flight_number: str
+    origin: str
+    dest: str
+    dep_time: str
+    price: float
