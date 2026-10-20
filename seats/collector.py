@@ -90,13 +90,12 @@ class Collector:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--date", type=date.fromisoformat)
     args = parser.parse_args()
 
     load_dotenv()
     source = SerpApiSource(os.environ.get("SERPAPI_KEY"), SETTINGS.currency, SETTINGS.gl, SETTINGS.hl)
     collector = Collector(source, Store(SETTINGS.db_path), BLOCKS, SCHEDULE, SETTINGS)
-    collector.run(args.date, args.dry_run)
+    collector.run(dry_run=args.dry_run)
 
 
 if __name__ == "__main__":

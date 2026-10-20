@@ -35,5 +35,5 @@ SETTINGS = Settings(
     currency="GBP",
     gl="uk",
     hl="en",
-    db_path=str(Path(__file__).resolve().parent.parent / "data" / "seats.db"),
+    db_path=str(Path.home() / "seats_data" / "seats.db"),
 )
