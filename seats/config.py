@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 from .models import Block, Schedule, Settings
@@ -35,5 +36,5 @@ SETTINGS = Settings(
     currency="GBP",
     gl="uk",
     hl="en",
-    db_path=str(Path.home() / "seats_data" / "seats.db"),
+    data_dir=os.environ.get("SEATS_DATA_DIR") or str(Path.home() / "seats_data" / "data"),
 )

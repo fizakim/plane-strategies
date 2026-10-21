@@ -3,4 +3,5 @@ __pycache__/
 probe_out/
 notes/
 data/
-.sqlite
+*.sqlite
+*.db

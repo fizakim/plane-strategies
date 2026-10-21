@@ -56,6 +56,6 @@ class Settings:
     currency: str
     gl: str
     hl: str
-    db_path: str
+    data_dir: str
     reserve: int = 0
     max_errors: int = 3

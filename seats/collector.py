@@ -94,7 +94,7 @@ def main():
 
     load_dotenv()
     source = SerpApiSource(os.environ.get("SERPAPI_KEY"), SETTINGS.currency, SETTINGS.gl, SETTINGS.hl)
-    collector = Collector(source, Store(SETTINGS.db_path), BLOCKS, SCHEDULE, SETTINGS)
+    collector = Collector(source, Store(SETTINGS.data_dir), BLOCKS, SCHEDULE, SETTINGS)
     collector.run(dry_run=args.dry_run)
 
 
