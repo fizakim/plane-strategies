@@ -5,3 +5,5 @@ notes/
 data/
 *.sqlite
 *.db
+plane-strategies-data/
+.vscode/
